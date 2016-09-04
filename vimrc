@@ -79,6 +79,8 @@ endif
 " ------------------------------------------------
 " haskell
 
+Plugin 'nbouscal/vim-stylish-haskell'
+
 Plugin 'godlygeek/tabular'
 let g:haskell_tabular = 1
 vmap a= :Tabularize /=<CR>
@@ -94,6 +96,7 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
+map <silent> tc :GhcModCheck<CR>
 
 " ------------------------------------------------
 " javascript

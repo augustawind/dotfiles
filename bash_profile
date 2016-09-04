@@ -51,9 +51,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ln='ln -i'
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
 
 # git
 alias git='hub'
