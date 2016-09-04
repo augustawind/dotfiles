@@ -86,7 +86,8 @@ let g:haskell_tabular = 1
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
-
+vmap a, :Tabularize /<-<CR>
+ 
 Plugin 'eagletmt/neco-ghc'
 let g:necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
@@ -152,9 +153,9 @@ set nobackup        " disable backup files (filename~)
 set splitright      " new windows spawn to the right of current window
 set encoding=utf-8  " UTF-8 encoding for new files
 set backspace=2     " full backspace capability
-set mouse=a
-set clipboard=unnamedplus,autoselect
+set clipboard=unnamed,unnamedplus,autoselect
 set cmdheight=1
+set mouse=a
 
 set number          " show line numbers
 set colorcolumn=100 " max line length marker
@@ -186,7 +187,7 @@ set tabstop=4       " tabs are always 4 spaces wide
 set softtabstop=4   " tab indents n columns; somehow > tabstop (look into this)
 set shiftwidth=4    " auto-indent n columns
 
-au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml
+au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml,*.hs,*.lhs
             \ call SetTabsTo(2)
 
 function! SetTabsTo(n)
