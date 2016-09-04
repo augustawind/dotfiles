@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Dustin Rohde
+	email = dustin.rohde@gmail.com
+[hub]
+	protocol = https
+[core]
+	editor = /usr/local/bin/vim
