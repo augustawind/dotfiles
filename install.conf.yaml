@@ -1,17 +1,17 @@
 - defaults:
     link:
-      create: true
-      relink: true
+        create: true
+        relink: true
 
 - clean: ['~']
 
 - link:
-  ~/.babel.json: babel.json
-  ~/.bash_profile: bash_profile
-  ~/.gitconfig: gitconfig
-  ~/.vim/snippets: vim-snippets
-  ~/.vim/syntax: vim-syntax
-  ~/.vimrc: vimrc
+    ~/.babel.json: babel.json
+    ~/.bash_profile: bash_profile
+    ~/.gitconfig: gitconfig
+    ~/.vim/snippets: vim-snippets
+    ~/.vim/syntax: vim-syntax
+    ~/.vimrc: vimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
