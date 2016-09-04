@@ -9,6 +9,7 @@
     ~/.babel.json: babel.json
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
+    ~/.tern-config: tern-config
     ~/.vim/snippets: vim-snippets
     ~/.vim/syntax: vim-syntax
     ~/.vimrc: vimrc
