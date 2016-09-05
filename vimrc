@@ -97,7 +97,7 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
-map <silent> tc :GhcModCheck<CR>
+map <silent> tc :GhcModCheckAsync<CR>
 
 " ------------------------------------------------
 " javascript
@@ -187,7 +187,7 @@ set tabstop=4       " tabs are always 4 spaces wide
 set softtabstop=4   " tab indents n columns; somehow > tabstop (look into this)
 set shiftwidth=4    " auto-indent n columns
 
-au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml,*.hs,*.lhs
+au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml
             \ call SetTabsTo(2)
 
 function! SetTabsTo(n)
