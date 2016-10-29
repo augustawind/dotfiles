@@ -8,6 +8,7 @@
 - link:
     ~/.babel.json: babel.json
     ~/.bash_profile: bash_profile
+    ~/.emacs.d: emacs.d
     ~/.gitconfig: gitconfig
     ~/.tern-config: tern-config
     ~/.vim/snippets: vim-snippets
