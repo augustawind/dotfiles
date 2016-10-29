@@ -19,6 +19,7 @@ source "${GITAWAREPROMPT}/main.sh"
 eval "$(stack --bash-completion-script stack)"
 
 # prompt ---------------------------------------------------------------------
+
 export PS1="\[\033[35m\]λ\[\e[0m\] \W\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] -> "
 
 # aliases --------------------------------------------------------------------
@@ -45,6 +46,7 @@ alias python='python3'
 alias vim='mvim -v'
 alias evrc='vim ~/.vimrc'
 alias ebp='vim ~/.bash_profile'
+alias fay='stack exec fay -- '
 
 # safety
 alias cp='cp -i'
@@ -55,7 +57,7 @@ alias ln='ln -i'
 # git
 alias git='hub'
 alias gs='git status'
-alias gl='git log --decorate --graph'
+alias gl='git ll'
 alias ga='git add'
 alias gc='git commit'
 alias gca='git commit -a'
@@ -107,3 +109,5 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
+
+export PATH="$HOME/.yarn/bin:$PATH"

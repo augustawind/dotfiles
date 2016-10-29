@@ -1,0 +1,8 @@
+(source gnu)
+(source melpa)
+
+(depends-on "evil-tabs")
+(depends-on "evil-visual-mark-mode")
+(depends-on "haskell-mode")
+(depends-on "pallet")
+(depends-on "solarized-theme")

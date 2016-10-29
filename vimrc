@@ -22,6 +22,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -38,6 +40,32 @@ let g:session_autosave = 'yes'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=0
+
+Plugin 'kien/rainbow_parentheses.vim'
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 1
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+au BufEnter,BufRead * RainbowParenthesesToggle
+au BufEnter,BufRead * RainbowParenthesesLoadRound
+au BufEnter,BufRead * RainbowParenthesesLoadSquare
+au BufEnter,BufRead * RainbowParenthesesLoadBraces
 
 " ------------------------------------------------
 " linting
@@ -87,6 +115,7 @@ vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 vmap a, :Tabularize /<-<CR>
+vmap al :Tabularize /[\[\\|,]<CR>
  
 Plugin 'eagletmt/neco-ghc'
 let g:necoghc_enable_detailed_browse = 1
@@ -102,8 +131,11 @@ map <silent> tc :GhcModCheckAsync<CR>
 " ------------------------------------------------
 " javascript
 
+Plugin 'raichoo/purescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'jwhitley/vim-literate-coffeescript'
+Plugin 'noc7c9/vim-iced-coffee-script'
 Plugin 'othree/yajs.vim'
 Plugin 'moll/vim-node'
 Plugin 'ternjs/tern_for_vim'
@@ -116,6 +148,19 @@ let g:tern#command = [
 let g:neocomplete#sources#omni#functions.javascript = [
             \ 'tern#Complete',
             \ ]
+
+" ------------------------------------------------
+" elm
+
+Plugin 'elmcast/elm-vim'
+
+let g:elm_detailed_complete = 1
+let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
+au BufEnter,BufRead *.elm call neocomplete#util#set_default_dictionary(
+    \ 'g:neocomplete#sources#omni#input_patterns',
+    \ 'elm',
+    \ '\.' )
 
 " ------------------------------------------------
 " python
@@ -187,7 +232,7 @@ set tabstop=4       " tabs are always 4 spaces wide
 set softtabstop=4   " tab indents n columns; somehow > tabstop (look into this)
 set shiftwidth=4    " auto-indent n columns
 
-au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml
+au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml,*.hs,*.lhs,*.clj,*.elm
             \ call SetTabsTo(2)
 
 function! SetTabsTo(n)
@@ -205,7 +250,7 @@ au BufNewFile,BufRead *.md,*.markdown
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=Courier\ New:h13
+    set guifont=Monaco:h14
 else
     set background=dark
     colorscheme gruvbox
