@@ -1,3 +1,11 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+
+[submodule "distel"]
+    path = emacs.d/distel
+    url = https://github.com/massemanet/distel
+
+[submodule "distel-completion"]
+    path = emacs.d/distel-completion
+    url = https://github.com/sebastiw/distel-completion

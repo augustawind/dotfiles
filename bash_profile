@@ -18,6 +18,9 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 eval "$(stack --bash-completion-script stack)"
 
+# default Erlang install
+. ~/erlang/19.0/activate
+
 # prompt ---------------------------------------------------------------------
 
 export PS1="\[\033[35m\]λ\[\e[0m\] \W\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] -> "
