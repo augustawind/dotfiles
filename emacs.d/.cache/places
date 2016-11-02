@@ -1,0 +1,7 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/dtr/.emacs.d/"
+  (dired-filename . "/Users/dtr/.emacs.d/init.el"))
+ ("/Users/dtr/.emacs.d/init.el" . 1303)
+ ("/Users/dtr/.spacemacs" . 1590)
+ ("/Users/dtr/.emacs.d/.cache/recentf" . 332)
+ ("/Users/dtr/.emacs.d/.cache/layouts/persp-auto-save" . 2696))
