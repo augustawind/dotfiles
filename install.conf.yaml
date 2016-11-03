@@ -6,7 +6,6 @@
 - clean: ['~']
 
 - link:
-    ~/.babel.json: babel.json
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.spacemacs: spacemacs
