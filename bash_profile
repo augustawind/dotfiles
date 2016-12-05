@@ -7,6 +7,8 @@
 
 # environment variables ------------------------------------------------------
 
+export PATH="$HOME/.yarn/bin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
 export EDITOR="/usr/bin/vim"
 export SUDO_EDITOR="vim"
@@ -113,4 +115,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
-export PATH="$HOME/.yarn/bin:$PATH"
+# docker
+
+function board () {
+    docker exec -it "$1" bash
+}

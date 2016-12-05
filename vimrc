@@ -24,6 +24,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'wakatime/vim-wakatime'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -253,7 +254,7 @@ if has('gui_running')
     set guifont=Monaco:h14
 else
     set background=dark
-    colorscheme gruvbox
+    colorscheme zenburn
 endif
 
 " ------------------------------------------------
