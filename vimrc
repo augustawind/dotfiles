@@ -1,6 +1,22 @@
 " ~/.vimrc
 " Dustin Rohde
 
+" ------------------------------------------------
+" init
+
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+
+for f in glob('~/.vim/vimrc.d/*.vim', 0, 1)
+  execute 'source' f
+endfor
+
+call plug#end()
+
+" ------------------------------------------------
+" settings
+
 set nocompatible
 filetype plugin indent on
 syntax on
@@ -63,14 +79,14 @@ au BufNewFile,BufRead *.md,*.markdown
             \ set textwidth=79
 
 " ------------------------------------------------
-" init
+" color & font
 
-call plug#begin()
-
-Plug 'tpope/vim-sensible'
-
-for f in glob('~/.vim/vimrc.d/*.vim', 0, 1)
-  execute 'source' f
-endfor
-
-call plug#end()
+if has('gui_running')
+    set background=dark
+    colorscheme github
+    set guifont=Monaco:h13
+    set linespace=5
+else
+    set background=dark
+    colorscheme default
+endif
