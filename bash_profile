@@ -12,16 +12,21 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils
 export LANG="en_US.UTF-8"
 export EDITOR="/usr/bin/vim"
 export SUDO_EDITOR="vim"
+export GOPATH=$HOME/work
+export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/
 
 # imports --------------------------------------------------------------------
 
+eval "$(thefuck --alias)"
 source ~/.bash/git-completion.bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
+
 eval "$(stack --bash-completion-script stack)"
 
-# default Erlang install
-. ~/erlang/19.0/activate
+source ~/.bash/bash-wakatime.sh
+
+. ~/erlang/19.0/activate  # default Erlang install
 
 # prompt ---------------------------------------------------------------------
 
@@ -43,9 +48,6 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias ll='ls -laF'
 alias la='ls -a'
-alias df='df -h'
-alias du='du -c -h'
-alias mkdr='mkdir -p -v'
 alias untmux='tmux kill-session'
 alias python='python3'
 alias vim='mvim -v'
@@ -120,3 +122,4 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 function board () {
     docker exec -it "$1" bash
 }
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
