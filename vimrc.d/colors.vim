@@ -10,10 +10,10 @@ Plug 'rakr/vim-one'
 
 if has('gui_running')
     set background=dark
-    colorscheme one
+    colorscheme monokai
     set guifont=Monaco:h13
     set linespace=5
 else
     set background=dark
-    colorscheme one
+    colorscheme monokai
 endif

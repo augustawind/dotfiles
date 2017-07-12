@@ -13,8 +13,8 @@
     ~/.vim/ftplugin: vim-ftplugin
     ~/.vim/snippets: vim-snippets
     ~/.vim/syntax: vim-syntax
+    ~/.vim/vimrc.d: vimrc.d
     ~/.vimrc: vimrc
-    ~/.vimrc.d: vimrc.d
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
