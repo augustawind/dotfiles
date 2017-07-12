@@ -10,9 +10,11 @@
     ~/.gitconfig: gitconfig
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
+    ~/.vim/ftplugin: vim-ftplugin
     ~/.vim/snippets: vim-snippets
     ~/.vim/syntax: vim-syntax
     ~/.vimrc: vimrc
+    ~/.vimrc.d: vimrc.d
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
