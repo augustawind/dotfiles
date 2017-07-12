@@ -1,5 +1,4 @@
-Plug 'garbas/vim-snipmate'
-
+Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 let g:session_autosave = 'yes'
 
