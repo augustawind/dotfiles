@@ -3,19 +3,23 @@ set wildmenu
 set wildmode=longest,list,full
 set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/neocomplete.vim'
-let g:neocomplete#auto_complete_delay = 0
-let g:neocomplete#enable_at_startup = 1
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim'
+else
+    Plug 'Shougo/vimproc.vim'
+    Plug 'Shougo/neocomplete.vim'
 
-if !exists('g:neocomplete#sources#omni#functions')
-    let g:neocomplete#sources#omni#functions = {}
-endif
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
+    let g:neocomplete#auto_complete_delay = 0
+    let g:neocomplete#enable_at_startup = 1
+
+    if !exists('g:neocomplete#sources#omni#functions')
+        let g:neocomplete#sources#omni#functions = {}
+    endif
+    if !exists('g:neocomplete#sources#omni#input_patterns')
+        let g:neocomplete#sources#omni#input_patterns = {}
+    endif
 endif
 
-Plug 'Shougo/neco-vim'  " FIXME: what is this for?
 Plug 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 

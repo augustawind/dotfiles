@@ -2,6 +2,9 @@
 " elm
 
 Plug 'elmcast/elm-vim'
+if has('nvim')
+    Plug 'pbogut/deoplete-elm'
+endif
 
 " ------------------------------------------------
 " go

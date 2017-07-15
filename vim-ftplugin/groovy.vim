@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.groovy  setf groovy
+setf groovy

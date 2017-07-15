@@ -15,6 +15,14 @@ endfor
 call plug#end()
 
 " ------------------------------------------------
+" neovim
+
+if !has('nvim')
+    set clipboard=unnamed,unnamedplus,autoselect
+endif
+
+
+" ------------------------------------------------
 " settings
 
 set nocompatible
@@ -31,7 +39,6 @@ set hidden          " keep abandoned buffers loaded
 
 set backspace=2     " full backspace capability
 set mouse=a         " enable mouse
-set clipboard=unnamed,unnamedplus,autoselect
 
 set history=25      " keep n lines of command-line history
 set cmdheight=2     " lines to use for cmdline
@@ -79,9 +86,14 @@ au BufNewFile,BufRead *.md,*.markdown
             \ set textwidth=79
 
 " ------------------------------------------------
-" color & font
+" appearance
 
 if has('gui_running')
+    set guioptions-=L
+    set guioptions-=R
+    set guioptions-=b
+    set guioptions-=l
+    set guioptions-=r
     set background=dark
     colorscheme github
     set guifont=Monaco:h13
