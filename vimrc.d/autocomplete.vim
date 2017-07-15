@@ -4,7 +4,8 @@ set wildmode=longest,list,full
 set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 
 if has('nvim')
-    Plug 'Shougo/deoplete.nvim'
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1
 else
     Plug 'Shougo/vimproc.vim'
     Plug 'Shougo/neocomplete.vim'
@@ -21,7 +22,7 @@ else
 endif
 
 Plug 'ervandew/supertab'
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+let g:SuperTabDefaultCompletionType = 'context'
 
 if has("gui_running")
       imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>

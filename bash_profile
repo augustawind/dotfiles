@@ -10,8 +10,8 @@
 export PATH="$HOME/.yarn/bin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
-export EDITOR="/usr/bin/vim"
-export SUDO_EDITOR="vim"
+export EDITOR="/usr/local/bin/nvim"
+export SUDO_EDITOR="$EDITOR"
 export GOPATH=$HOME/work
 export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/
 
@@ -50,9 +50,10 @@ alias ll='ls -laF'
 alias la='ls -a'
 alias untmux='tmux kill-session'
 alias python='python3'
-alias vim='mvim -v'
-alias evrc='vim ~/.vimrc'
-alias ebp='vim ~/.bash_profile'
+alias vim='nvim'
+alias evimrc='vim ~/.vimrc'
+alias eviminit='vim ~/.config/nvim/init.vim'
+alias ebashrc='vim ~/.bash_profile'
 alias fay='stack exec fay -- '
 
 # safety

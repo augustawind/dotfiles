@@ -3,9 +3,6 @@ setlocal autowrite
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
 nmap <leader>r  <Plug>(go-run)
 nmap <leader>t  <Plug>(go-test)
 nmap <Leader>c  <Plug>(go-coverage-toggle)

@@ -44,13 +44,11 @@ set history=25      " keep n lines of command-line history
 set cmdheight=2     " lines to use for cmdline
 
 set colorcolumn=80      " max line length marker
-set laststatus=2        " always show statusline
-set ruler               " show line/column number in statusline
+set ruler               " show line/column number in on! GitBranch()
 set number              " show line numbers
 set foldmethod=indent   " fold indented text
 set foldlevel=99
 
-set autochdir       " auto cd to current file directory
 set splitbelow      " split new window below current window by default
 
 set nohlsearch      " don't highlight search results
@@ -63,6 +61,35 @@ set visualbell t_vb=
 autocmd! GuiEnter * set visualbell t_vb=
 
 " ------------------------------------------------
+" statusline
+
+set laststatus=2        " always show statusline
+
+function! GitBranch()
+	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+	let l:branchname = GitBranch()
+	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+  
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\ 
+set statusline+=%{ObsessionStatus('[$]','[\ ]')}
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %5l:%c
+set statusline+=\ %5p%%
+set statusline+=\ 
+
+" ------------------------------------------------
 " whitespace
 
 set smarttab
@@ -73,7 +100,7 @@ set tabstop=4       " tabs are always 4 spaces wide
 set softtabstop=4   " tab indents n columns; somehow > tabstop (look into this)
 set shiftwidth=4    " auto-indent n columns
 
-au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml,*.hs,*.lhs,*.clj,*.elm
+au BufNewFile,BufRead *.html,*.jade,*.pug,*.md,*.markdown,*.stylus,*.json,*.yml,*.yaml,*.hs,*.lhs,*.clj
             \ call SetTabsTo(2)
 
 function! SetTabsTo(n)
@@ -100,5 +127,5 @@ if has('gui_running')
     set linespace=5
 else
     set background=dark
-    colorscheme default
+    colorscheme molokayo
 endif
