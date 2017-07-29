@@ -3,19 +3,24 @@
         create: true
         relink: true
 
-- clean: ['~']
+- clean: ['~', '~/.vim', '~/.vim/*']
 
 - link:
     ~/.bash_profile: bash_profile
-    ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
-    ~/.vim/ftplugin: vim-ftplugin
-    ~/.vim/snippets: vim-snippets
-    ~/.vim/syntax: vim-syntax
-    ~/.vim/vimrc.d: vimrc.d
-    ~/.vimrc: vimrc
+
+    # Vim
+    ~/.vim/ftplugin: vim/ftplugin/
+    ~/.vim/snippets: vim/snippets/
+    ~/.vim/syntax: vim/syntax/
+    ~/.vim/vimrc.d: vim/vimrc.d/
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: vim/init.vim
+
+    # Firefox
+    '~/Library/Application Support/Firefox/Profiles/dtr/chrome': Firefox/Profiles/dtr/chrome/
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
