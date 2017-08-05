@@ -41,6 +41,11 @@ Plug 'davidhalter/jedi-vim'
 Plug 'zchee/deoplete-jedi'
 
 " ------------------------------------------------
+" python
+
+Plug 'alexgenco/neovim-ruby'
+
+" ------------------------------------------------
 " rust
 
 Plug 'racer-rust/vim-racer'

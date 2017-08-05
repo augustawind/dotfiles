@@ -8,6 +8,7 @@
 - link:
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
+    ~/.guile: guile
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
 

@@ -22,3 +22,6 @@ nnoremap <leader>c :lcd %:p:h<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 nnoremap <C-X> :bdelete<CR>
+
+" make ZZ shortcut use :xa instead of :wq
+nnoremap ZZ :xa<CR>
