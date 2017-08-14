@@ -38,7 +38,10 @@ export PS1="\[\033[35m\]λ\[\e[0m\] \W\[$txtcyn\]\$git_branch\[$txtred\]\$git_di
 alias cloudapi='cd ~/gooee/cloud-api && source makeenv.sh'
 
 # utilities
-alias "tmux"="tmux -2"
+alias tmux="tmux -2"
+
+# applications
+alias crawl-tiles='/Applications/Dungeon\ Crawl\ Stone\ Soup\ -\ Tiles.app/Contents/MacOS/Dungeon\ Crawl\ Stone\ Soup\ -\ Tiles'
 
 # colored output
 alias ls='ls -G'
@@ -74,7 +77,8 @@ alias gitflow='git commit -a && git push'
 alias gb='git branch'
 alias gch='git checkout'
 
-# colored man pages
+# colored man pages ----------------------------------------------------------
+
 man() {
     env \
             LESS_TERMCAP_mb=$(printf "\e[1;37m") \
