@@ -11,8 +11,8 @@ nnoremap sv :source $MYVIMRC<CR>
 nnoremap <space> za
 
 " navigate/close quickfix
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
+map <leader>n :cnext<CR>
+map <leader>m :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
 " chdir to current file

@@ -58,6 +58,7 @@ alias evimrc='vim ~/.vimrc'
 alias eviminit='vim ~/.config/nvim/init.vim'
 alias ebashrc='vim ~/.bash_profile'
 alias fay='stack exec fay -- '
+alias r='robo'
 
 # safety
 alias cp='cp -i'
