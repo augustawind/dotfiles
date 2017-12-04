@@ -24,8 +24,6 @@ source "${GITAWAREPROMPT}/main.sh"
 
 eval "$(stack --bash-completion-script stack)"
 
-source ~/.bash/bash-wakatime.sh
-
 . ~/erlang/19.0/activate  # default Erlang install
 
 # prompt ---------------------------------------------------------------------
@@ -44,7 +42,7 @@ alias tmux="tmux -2"
 alias crawl-tiles='/Applications/Dungeon\ Crawl\ Stone\ Soup\ -\ Tiles.app/Contents/MacOS/Dungeon\ Crawl\ Stone\ Soup\ -\ Tiles'
 
 # colored output
-alias ls='ls -G'
+alias ls='gls --color --group-directories-first'
 
 # convenience
 alias ..='cd ..'
@@ -77,6 +75,13 @@ alias gp='git push'
 alias gitflow='git commit -a && git push'
 alias gb='git branch'
 alias gch='git checkout'
+
+# custom utilities -----------------------------------------------------------
+
+mkvenv() {
+    mkvirtualenv $@
+    pip install neovim ipython ipdb
+}
 
 # colored man pages ----------------------------------------------------------
 
