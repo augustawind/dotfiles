@@ -46,6 +46,11 @@ Plug 'zchee/deoplete-jedi'
 Plug 'alexgenco/neovim-ruby'
 
 " ------------------------------------------------
+" ruby
+
+Plug 'fishbullet/deoplete-ruby'
+
+" ------------------------------------------------
 " rust
 
 Plug 'racer-rust/vim-racer'
