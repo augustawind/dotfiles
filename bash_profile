@@ -67,6 +67,7 @@ alias ln='ln -i'
 # git
 alias git='hub'
 alias gs='git status'
+alias gd='git diff'
 alias gl='git ll'
 alias ga='git add'
 alias gc='git commit'
