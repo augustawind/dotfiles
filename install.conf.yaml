@@ -9,6 +9,7 @@
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.guile: guile
+    ~/.iterm2: iterm2/
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
 
