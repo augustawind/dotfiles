@@ -38,6 +38,11 @@ Plug 'ternjs/tern_for_vim'
 Plug 'elzr/vim-json'
 
 " ------------------------------------------------
+" jinja2
+
+Plug 'Glench/Vim-Jinja2-Syntax'
+
+" ------------------------------------------------
 " python
 
 Plug 'vim-scripts/indentpython.vim'

@@ -30,3 +30,6 @@ let g:colorscheme_switcher_define_mappings = 0
 " git integration
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
+" ripgrep
+Plug 'jremmen/vim-ripgrep'
