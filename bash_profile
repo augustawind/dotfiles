@@ -21,6 +21,7 @@ eval "$(thefuck --alias)"
 source ~/.bash/git-completion.bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(stack --bash-completion-script stack)"
 
@@ -74,11 +75,26 @@ alias gap='git add -p'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gp='git push'
-alias gitflow='git commit -a && git push'
+alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+alias gu='git pull'
 alias gb='git branch'
 alias gch='git checkout'
 
 # custom utilities -----------------------------------------------------------
+
+gpx() {
+    case $1 in
+        stage|testcenter|prod)
+            echo "don't force push to $1 pls"
+            return 1 ;;
+        *)
+            git push -f origin $(git rev-parse --abbrev-ref HEAD):$1 ;;
+    esac
+}
+
+merge-latest() {
+    git checkout $1 && git pull && git checkout - && git merge -
+}
 
 mkvenv() {
     mkvirtualenv $@
@@ -123,16 +139,15 @@ shopt -s checkwinsize
 export NVM_DIR="/Users/dtr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# gooee ----------------------------------------------------------------------
+# virtualenv -----------------------------------------------------------------
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
-# docker
+# docker ---------------------------------------------------------------------
 
 function board () {
     docker exec -it "$1" bash
 }
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

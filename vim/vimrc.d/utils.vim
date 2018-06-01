@@ -33,3 +33,12 @@ Plug 'tpope/vim-rhubarb'
 
 " ripgrep
 Plug 'jremmen/vim-ripgrep'
+
+" repeat last command (enhanced for tpope)
+Plug 'tpope/vim-repeat'
+
+" surround things with other things
+Plug 'tpope/vim-surround'
+
+" expand %% to current buffer dir
+cabbr <expr> %% expand('%:p:h')
