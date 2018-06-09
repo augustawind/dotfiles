@@ -7,6 +7,7 @@
 
 - link:
     ~/.bash_profile: bash_profile
+    ~/.crawlrc: crawlrc
     ~/.gitconfig: gitconfig
     ~/.guile: guile
     ~/.iterm2: iterm2/
