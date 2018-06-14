@@ -14,6 +14,8 @@ export EDITOR="/usr/local/bin/nvim"
 export SUDO_EDITOR="$EDITOR"
 export GOPATH=$HOME/work
 export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
 
 # imports --------------------------------------------------------------------
 
@@ -90,6 +92,10 @@ gpx() {
         *)
             git push -f origin $(git rev-parse --abbrev-ref HEAD):$1 ;;
     esac
+}
+
+delete-branch() {
+    git branch -D $1 & git push origin :$1 
 }
 
 merge-latest() {

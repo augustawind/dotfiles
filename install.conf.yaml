@@ -11,6 +11,7 @@
     ~/.gitconfig: gitconfig
     ~/.guile: guile
     ~/.iterm2: iterm2/
+    ~/.lessfilter: lessfilter
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
 
