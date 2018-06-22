@@ -5,9 +5,12 @@
 # check for an interactive session
 [ -z "$PS1" ] && return
 
-# environment variables ------------------------------------------------------
+# PATH -----------------------------------------------------------------------
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# environment variables ------------------------------------------------------
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
 export EDITOR="/usr/local/bin/nvim"
@@ -103,8 +106,16 @@ merge-latest() {
 }
 
 mkvenv() {
-    mkvirtualenv $@
+    if [[ -z $1 ]]; then
+        env_dir="$HOME/.venvs/$(pwd | sed 's/\//\n/g' | tail -n 1)"
+    else
+        env_dir=$1
+    fi
+    python3 -m venv $env_dir
+    source "$env_dir/bin/activate"
     pip install neovim ipython ipdb
+    tree $env_dir
+    unset env_dir
 }
 
 # colored man pages ----------------------------------------------------------
@@ -157,3 +168,5 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 function board () {
     docker exec -it "$1" bash
 }
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -62,6 +62,6 @@ Plug 'fishbullet/deoplete-ruby'
 " ------------------------------------------------
 " rust
 
-Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
+Plug 'sebastianmarkow/deoplete-rust'
 Plug 'cespare/vim-toml'

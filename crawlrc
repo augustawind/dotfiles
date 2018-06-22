@@ -40,7 +40,7 @@ easy_eat_chunks = true
 travel_open_doors = false
 
 spell_slot ^= Blink:+b
-spell_slot ^= Deflect+r
+spell_slot ^= Deflect:+r
 
 
 # 3-h                                  Messages and Display Enhancements.
