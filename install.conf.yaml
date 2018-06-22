@@ -16,12 +16,13 @@
     ~/.tern-config: tern-config
 
     # Vim
+    ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: vim/init.vim
+    ~/.vim/init.vim: vim/init.vim
     ~/.vim/ftplugin: vim/ftplugin/
     ~/.vim/snippets: vim/snippets/
     ~/.vim/syntax: vim/syntax/
     ~/.vim/vimrc.d: vim/vimrc.d/
-    ~/.vimrc: vim/vimrc
-    ~/.config/nvim/init.vim: vim/init.vim
 
     # Firefox
     '~/Library/Application Support/Firefox/Profiles/dtr/chrome': Firefox/Profiles/dtr/chrome/
