@@ -42,3 +42,6 @@ Plug 'tpope/vim-surround'
 
 " expand %% to current buffer dir
 cabbr <expr> %% expand('%:p:h')
+
+" source code browser
+Plug 'majutsushi/tagbar'

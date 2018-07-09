@@ -39,7 +39,7 @@ map <leader>( :PrevColorScheme<CR>
 map <leader>) :NextColorScheme<CR>
 
 " cycle thru light/dark background
-map <leader>b :call BackgroundToggle()<CR>
+map <leader>g :call BackgroundToggle()<CR>
 
 function! BackgroundToggle()
     if &background == "light"
@@ -48,3 +48,6 @@ function! BackgroundToggle()
         execute "set background=light"
     endif
 endfunction
+
+" open/close tag browser
+nnoremap <leader>b :TagbarToggle<CR>
