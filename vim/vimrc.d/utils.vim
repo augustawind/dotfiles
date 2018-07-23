@@ -45,3 +45,17 @@ cabbr <expr> %% expand('%:p:h')
 
 " source code browser
 Plug 'majutsushi/tagbar'
+let g:tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsbin' : '/Users/dtr/src/rst2ctags/rst2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+    \ }

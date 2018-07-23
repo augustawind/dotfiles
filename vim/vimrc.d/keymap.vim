@@ -50,4 +50,4 @@ function! BackgroundToggle()
 endfunction
 
 " open/close tag browser
-nnoremap <leader>b :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
