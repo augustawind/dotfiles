@@ -126,6 +126,6 @@ if has('gui_running')
     set guifont=Monaco:h13
     set linespace=5
 else
-    colorscheme nord
+    colorscheme pablo
     set background=dark
 endif

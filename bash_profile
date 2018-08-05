@@ -22,7 +22,6 @@ export LESSOPEN='|~/.lessfilter %s'
 
 # imports --------------------------------------------------------------------
 
-eval "$(thefuck --alias)"
 source ~/.bash/git-completion.bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
@@ -57,6 +56,7 @@ alias ll='ls -laF'
 alias la='ls -a'
 alias untmux='tmux kill-session'
 alias python='python3'
+alias pip='pip3'
 alias vim='nvim'
 alias evimrc='vim ~/.vimrc'
 alias eviminit='vim ~/.config/nvim/init.vim'

@@ -14,7 +14,7 @@ Plug 'tpope/vim-git'
 " ------------------------------------------------
 " go
 
-Plug 'zchee/deoplete-go'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'fatih/vim-go'
 
 " ------------------------------------------------

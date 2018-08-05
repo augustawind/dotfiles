@@ -7,3 +7,10 @@
 	editor = /usr/local/bin/nvim
 [credential]
 	helper = osxkeychain
+[alias]
+    # Show all aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    # Standard log that shows diff stat
+    ll = log --pretty=short --stat
+    # Standard log plus graph
+    lg = log --pretty=short --stat --graph
