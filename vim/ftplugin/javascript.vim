@@ -1,3 +1,5 @@
+let b:ale_linters = {'javascript': ['eslint']}
+
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 

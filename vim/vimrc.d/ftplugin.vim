@@ -27,19 +27,20 @@ Plug 'eagletmt/neco-ghc'
 " ------------------------------------------------
 " javascript
 
-Plug 'raichoo/purescript-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-Plug 'jwhitley/vim-literate-coffeescript'
-Plug 'noc7c9/vim-iced-coffee-script'
-Plug 'othree/yajs.vim'
-Plug 'moll/vim-node'
-Plug 'elzr/vim-json'
-
 Plug 'ternjs/tern_for_vim'
 if has('nvim')
     Plug 'carlitux/deoplete-ternjs'
 endif
+
+Plug 'moll/vim-node'
+Plug 'elzr/vim-json'
+Plug 'raichoo/purescript-vim'
+
+Plug 'kchmck/vim-coffee-script'
+Plug 'jwhitley/vim-literate-coffeescript'
+Plug 'noc7c9/vim-iced-coffee-script'
+
 
 " ------------------------------------------------
 " jinja2

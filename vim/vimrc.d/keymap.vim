@@ -1,3 +1,8 @@
+" quick save
+nnoremap <c-s> :wq<CR>
+inoremap <c-s> <Esc>:wq<CR>a
+
+
 " sane vim splits
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
