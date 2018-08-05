@@ -34,8 +34,12 @@ Plug 'jwhitley/vim-literate-coffeescript'
 Plug 'noc7c9/vim-iced-coffee-script'
 Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
-Plug 'ternjs/tern_for_vim'
 Plug 'elzr/vim-json'
+
+Plug 'ternjs/tern_for_vim'
+if has('nvim')
+    Plug 'carlitux/deoplete-ternjs'
+endif
 
 " ------------------------------------------------
 " jinja2
