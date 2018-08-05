@@ -1,4 +1,3 @@
-# This is Git's per-user configuration file.
 [user]
 	name = Dustin Rohde
 	email = dustin.rohde@gmail.com
@@ -6,3 +5,5 @@
 	protocol = https
 [core]
 	editor = /usr/local/bin/nvim
+[credential]
+	helper = osxkeychain
