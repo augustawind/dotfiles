@@ -2,15 +2,14 @@ set textwidth=100
 set colorcolumn=100
 
 let g:deoplete#sources#rust#racer_binary = "/Users/dtr/.cargo/bin/racer"
-let g:deoplete#sources#rust#rust_source_path = "/Users/dtr/src/rust"
+let g:deoplete#sources#rust#rust_source_path = "/Users/dtr/src/rust/src"
 let g:deoplete#sources#rust#show_duplicates = 1
 
-let b:ale_rust_cargo_use_check = 1
-let b:ale_rust_cargo_check_all_targets = 1
+let g:ale_rust_cargo_use_check = 1
 
-let b:ale_fixers = {'rust': ['rustfmt']}
-let b:ale_fix_on_save = 1
-let b:ale_lint_on_save = 1
+let g:ale_fixers = {'rust': ['rustfmt']}
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 1
 
 nmap gs <Plug>DeopleteRustGoToDefinitionSplit
 nmap gv <Plug>DeopleteRustGoToDefinitionVSplit

@@ -1,6 +1,6 @@
 " quick save
-nnoremap <c-s> :wq<CR>
-inoremap <c-s> <Esc>:wq<CR>a
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>a
 
 
 " sane vim splits

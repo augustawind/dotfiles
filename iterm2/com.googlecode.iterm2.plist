@@ -630,7 +630,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>586 169 445 77 0 0 1280 778 </string>
+	<string>586 35 445 77 0 0 1280 800 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 298 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -638,13 +638,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 469 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>339 373 918 401 0 0 1280 778 </string>
+	<string>339 334 918 401 0 0 1280 800 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame com.apple.typography_panel_ProggySquareTTSZ</key>
 	<string>212 475 260 46 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 640 458 0 0 1280 800 </string>
+	<string>0 0 650 602 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>5 240 650 502 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
@@ -1947,7 +1947,7 @@
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
-			<true/>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -2523,7 +2523,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Courier 18</string>
+			<string>ProggySquareTTSZ 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -2660,7 +2660,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-20T17:32:26Z</date>
+	<date>2018-08-08T15:42:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
