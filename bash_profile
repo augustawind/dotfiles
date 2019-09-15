@@ -16,18 +16,21 @@ export LANG="en_US.UTF-8"
 export EDITOR="/usr/local/bin/nvim"
 export SUDO_EDITOR="$EDITOR"
 export GOPATH=$HOME/work
-export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/
+export PATH="$GOPATH/bin:$HOME/bin:$PATH"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 
 # imports --------------------------------------------------------------------
 
+source ~/.bash/venv-completion.bash
 source ~/.bash/git-completion.bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(stack --bash-completion-script stack)"
+eval "$(pyenv init -)"
 
 . ~/erlang/19.0/activate  # default Erlang install
 
@@ -107,15 +110,25 @@ merge-latest() {
 
 mkvenv() {
     if [[ -z $1 ]]; then
-        env_dir="$HOME/.venvs/$(pwd | sed 's/\//\n/g' | tail -n 1)"
+        env_dir="$HOME/.venvs/${PWD##*/}"
     else
         env_dir=$1
     fi
     python3 -m venv $env_dir
     source "$env_dir/bin/activate"
     pip install neovim ipython ipdb
-    tree $env_dir
     unset env_dir
+}
+
+venv() {
+    if [[ -z $1 ]]; then
+        dir=${PWD##*/}
+    else
+        dir="$1"
+        cd "$HOME/projects/$dir" &>/dev/null || cd "$HOME/gooee/$dir"
+    fi
+    source $HOME/.venvs/$dir/bin/activate
+    unset dir
 }
 
 # colored man pages ----------------------------------------------------------
@@ -170,3 +183,15 @@ function board () {
 }
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export VULKAN_SDK="$HOME/.vulkan_sdk/macOS"
+
+export PATH="$VULKAN_SDK/bin:$PATH"
+
+export DYLD_LIBRARY_PATH="$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH"
+
+export VK_ICD_FILENAMES="$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json"
+
+export VK_LAYER_PATH="$VULKAN_SDK/etc/vulkan/explicit_layer.d"
+
+export SHADERC_LIB_DIR="$VULKAN_SDK/lib"

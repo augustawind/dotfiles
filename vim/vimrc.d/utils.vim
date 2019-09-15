@@ -59,3 +59,9 @@ let g:tagbar_type_rst = {
     \ },
     \ 'sort': 0,
     \ }
+
+" indentation guides
+Plug 'Yggdroot/indentLine'
+let g:indentLine_char = '┊'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0

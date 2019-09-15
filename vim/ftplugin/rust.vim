@@ -2,7 +2,6 @@ set textwidth=100
 set colorcolumn=100
 
 let g:deoplete#sources#rust#racer_binary = "/Users/dtr/.cargo/bin/racer"
-let g:deoplete#sources#rust#rust_source_path = "/Users/dtr/src/rust/src"
 let g:deoplete#sources#rust#show_duplicates = 1
 
 let g:ale_rust_cargo_use_check = 1

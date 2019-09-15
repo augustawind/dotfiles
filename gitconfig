@@ -14,3 +14,5 @@
     ll = log --pretty=short --stat
     # Standard log plus graph
     lg = log --pretty=short --stat --graph
+[push]
+	default = upstream

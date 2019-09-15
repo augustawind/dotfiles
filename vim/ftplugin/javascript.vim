@@ -1,6 +1,6 @@
 let b:ale_linters = {'javascript': ['eslint']}
 
-let g:tern#command = ["tern"]
+let g:tern#command = ["/Users/dtr/.config/nvim/plugged/tern_for_vim/node_modules/.bin/tern"]
 let g:tern#arguments = ["--persistent"]
 
 if has('nvim')
