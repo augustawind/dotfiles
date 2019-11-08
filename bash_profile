@@ -117,6 +117,7 @@ mkvenv() {
     python3 -m venv $env_dir
     source "$env_dir/bin/activate"
     pip install neovim ipython ipdb
+    pip install --upgrade pip
     unset env_dir
 }
 
@@ -125,7 +126,7 @@ venv() {
         dir=${PWD##*/}
     else
         dir="$1"
-        cd "$HOME/projects/$dir" &>/dev/null || cd "$HOME/gooee/$dir"
+        cd "$HOME/projects/$dir"
     fi
     source $HOME/.venvs/$dir/bin/activate
     unset dir
