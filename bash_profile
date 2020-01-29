@@ -117,7 +117,7 @@ mkvenv() {
     fi
     python3 -m venv $env_dir
     source "$env_dir/bin/activate"
-    pip install neovim ipython ipdb
+    pip install neovim ipython ipdb pylint
     pip install --upgrade pip
     unset env_dir
 }

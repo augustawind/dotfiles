@@ -1,7 +1,9 @@
+" leader key
+let g:mapleader = "\\"
+
 " quick save
 nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>a
-
 
 " sane vim splits
 nnoremap <c-h> <c-w>h
