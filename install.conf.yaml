@@ -7,6 +7,7 @@
 
 - link:
     ~/.bash_profile: bash_profile
+    ~/.clang-format: clang-format
     ~/.crawlrc: crawlrc
     ~/.gitconfig: gitconfig
     ~/.guile: guile

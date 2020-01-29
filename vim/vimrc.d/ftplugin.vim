@@ -1,3 +1,10 @@
+" c/c++
+" ------------------------------------------------
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-clang'
+let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
+let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/9.0.1/include/"
+
 " ------------------------------------------------
 " elm
 

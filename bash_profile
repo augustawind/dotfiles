@@ -9,6 +9,9 @@
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$(brew --prefix openssl)/bin:$PATH"
+export PATH="$(brew --prefix llvm)/bin:$PATH"
 
 # environment variables ------------------------------------------------------
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
@@ -31,8 +34,6 @@ source "${GITAWAREPROMPT}/main.sh"
 
 eval "$(stack --bash-completion-script stack)"
 eval "$(pyenv init -)"
-
-. ~/erlang/19.0/activate  # default Erlang install
 
 # prompt ---------------------------------------------------------------------
 
