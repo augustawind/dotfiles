@@ -6,6 +6,7 @@
 - clean: ['~', '~/.vim', '~/.vim/*']
 
 - link:
+    ~/.alacritty.yml: alacritty.yml
     ~/.bash_profile: bash_profile
     ~/.clang-format: clang-format
     ~/.crawlrc: crawlrc
@@ -15,6 +16,7 @@
     ~/.lessfilter: lessfilter
     ~/.spacemacs: spacemacs
     ~/.tern-config: tern-config
+    ~/.tmux.conf: tmux.conf
 
     # Vim
     ~/.vimrc: vim/vimrc

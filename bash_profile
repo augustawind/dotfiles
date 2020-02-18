@@ -10,8 +10,9 @@
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$(brew --prefix openssl)/bin:$PATH"
-export PATH="$(brew --prefix llvm)/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/Applications/Alacritty.app/Contents/MacOS:$PATH"
 
 # environment variables ------------------------------------------------------
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
@@ -22,7 +23,6 @@ export GOPATH=$HOME/work
 export PATH="$GOPATH/bin:$HOME/bin:$PATH"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export LESS='-R'
-export LESSOPEN='|~/.lessfilter %s'
 
 # imports --------------------------------------------------------------------
 
@@ -90,6 +90,10 @@ alias gb='git branch'
 alias gch='git checkout'
 
 # custom utilities -----------------------------------------------------------
+
+pless() {
+    LESSOPEN='|~/.lessfilter %s' less "$@"
+}
 
 gpx() {
     case $1 in
