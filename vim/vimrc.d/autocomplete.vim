@@ -7,6 +7,7 @@ if has('nvim')
     " deoplete
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     let g:deoplete#enable_at_startup = 1
+    Plug 'Shougo/neoinclude.vim'
 
     " LanguageClient
     set hidden
