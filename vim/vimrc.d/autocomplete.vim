@@ -9,19 +9,10 @@ if has('nvim')
     let g:deoplete#enable_at_startup = 1
     Plug 'Shougo/neoinclude.vim'
 
-    " LanguageClient
+    " CoC language server support (disabled by default in favor of deoplete).
     set hidden
-    Plug 'autozimu/LanguageClient-neovim', {
-                \ 'branch': 'next',
-                \ 'do': 'bash install.sh',
-                \ }
-    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-    nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-    nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-
-    nnoremap <leader>lS :LanguageClientStop<CR>
-    nnoremap <leader>ls :LanguageClientStart<CR>
-    nnoremap <leader>R :LanguageClientStop<CR> <bar> :sleep 1<CR> <bar> :LanguageClientStart<CR>
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    let g:coc_enabled = 0
 
     " (Optional) Multi-entry selection UI.
     Plug 'junegunn/fzf'

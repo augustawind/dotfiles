@@ -58,6 +58,9 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias ll='ls -laF'
 alias la='ls -a'
+alias netm='nettop -P -m tcp -J bytes_in,bytes_out'
+
+# coding
 alias untmux='tmux kill-session'
 alias python='python3'
 alias pip='pip3'
@@ -67,6 +70,9 @@ alias eviminit='vim ~/.config/nvim/init.vim'
 alias ebashrc='vim ~/.bash_profile'
 alias fay='stack exec fay -- '
 alias r='robo'
+alias ct='cargo test'
+alias cf='cargo fmt'
+alias cr='cargo run'
 
 # safety
 alias cp='cp -i'
@@ -92,7 +98,8 @@ alias gch='git checkout'
 # custom utilities -----------------------------------------------------------
 
 pless() {
-    LESSOPEN='|~/.lessfilter %s' less "$@"
+    #LESSOPEN='|~/.lessfilter %s' less "$@"
+    LESSOPEN="| $(which src-hilite-lesspipe.sh) %s" less "$@"
 }
 
 gpx() {
@@ -164,8 +171,8 @@ complete -cf spawn
 # bash history ---------------------------------------------------------------
 
 HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=2000
+HISTFILESIZE=8000
 
 shopt -s histappend
 shopt -s checkwinsize

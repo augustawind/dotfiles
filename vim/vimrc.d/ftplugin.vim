@@ -6,6 +6,12 @@ let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTool
 let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/9.0.1/include/"
 
 " ------------------------------------------------
+" elixir
+
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
+" ------------------------------------------------
 " elm
 
 Plug 'elmcast/elm-vim'
@@ -27,9 +33,10 @@ Plug 'fatih/vim-go'
 " ------------------------------------------------
 " haskell
 
+Plug 'neovimhaskell/haskell-vim'
 Plug 'nbouscal/vim-stylish-haskell'
+Plug 'alx741/vim-stylishask'
 Plug 'godlygeek/tabular'
-Plug 'eagletmt/neco-ghc'
 
 " ------------------------------------------------
 " javascript

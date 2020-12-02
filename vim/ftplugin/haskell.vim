@@ -1,18 +1,21 @@
+" use CoC instead of deoplete
+call deoplete#disable()
+let g:coc_enabled = 1
+
+let g:haskell_enable_quantification = 1   " highlight `forall`
+let g:haskell_enable_recursivedo = 1      " highlight `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " highlight `proc`
+let g:haskell_enable_pattern_synonyms = 1 " highlight `pattern`
+let g:haskell_enable_typeroles = 1        " highlight type roles
+let g:haskell_enable_static_pointers = 1  " highlight `static`
+let g:haskell_backpack = 1                " highlight backpack keywords
+
 let g:haskell_tabular = 1
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 vmap a, :Tabularize /<-<CR>
 vmap al :Tabularize /[\[\\|,]<CR>
- 
-let g:necoghc_enable_detailed_browse = 1
-setlocal omnifunc=necoghc#omnifunc
-
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
-map <silent> tc :GhcModCheckAsync<CR>
 
 " ------------------------------------------------
 " module headers
