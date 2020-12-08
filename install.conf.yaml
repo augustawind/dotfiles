@@ -10,6 +10,7 @@
     ~/.bash_profile: bash_profile
     ~/.clang-format: clang-format
     ~/.crawlrc: crawlrc
+    ~/.config/elixir_ls: elixir_ls/
     ~/.gitconfig: gitconfig
     ~/.guile: guile
     ~/.iterm2: iterm2/

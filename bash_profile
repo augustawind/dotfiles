@@ -9,6 +9,7 @@
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.kiex/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
@@ -16,6 +17,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Applications/Alacritty.app/Contents/MacOS:$PATH"
 
 # environment variables ------------------------------------------------------
+export XDG_CONFIG_HOME="$HOME/.config"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
 export EDITOR="/usr/local/bin/nvim"
@@ -29,10 +31,12 @@ export LESS='-R'
 
 source ~/.bash/venv-completion.bash
 source ~/.bash/git-completion.bash
+source ~/.bash/kerl-completion.bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 source "/usr/local/opt/asdf/asdf.sh"
 source "/usr/local/opt/asdf/etc/bash_completion.d/asdf.bash"
+[[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex"
 
 eval "$(stack --bash-completion-script stack)"
 eval "$(pyenv init -)"
@@ -100,8 +104,8 @@ alias gch='git checkout'
 # custom utilities -----------------------------------------------------------
 
 pless() {
-    #LESSOPEN='|~/.lessfilter %s' less "$@"
-    LESSOPEN="| $(which src-hilite-lesspipe.sh) %s" less "$@"
+    LESSOPEN='|~/.lessfilter %s' less "$@"
+    # LESSOPEN="| $(which src-hilite-lesspipe.sh) %s" less "$@"
 }
 
 gpx() {
