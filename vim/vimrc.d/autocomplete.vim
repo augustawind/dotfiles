@@ -4,18 +4,42 @@ set wildmode=longest,list,full
 set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 
 if has('nvim')
-    " deoplete
+    " ------------------------------------------------------------------
+    " deoplete - enabled by default
+
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     let g:deoplete#enable_at_startup = 1
     Plug 'Shougo/neoinclude.vim'
 
-    " CoC language server support (disabled by default in favor of deoplete).
+    " ------------------------------------------------------------------
+    " CoC language server - disabled by default
+
     set hidden
     Plug 'neoclide/coc.nvim',
                 \ { 'branch': 'release',
                 \   'do': ':CocInstall coc-json coc-lua coc-elixir'
                 \ }
-    let g:coc_enabled = 0
+    let g:coc_start_at_startup = 0
+
+    function! EnableCoc()
+        call deoplete#disable()
+        :CocStart
+
+        " GoTo code navigation.
+        nmap <silent> gd <Plug>(coc-definition)
+        nmap <silent> gy <Plug>(coc-type-definition)
+        nmap <silent> gi <Plug>(coc-implementation)
+        nmap <silent> gr <Plug>(coc-references)
+
+        " Symbol renaming.
+        nmap <leader>rn <Plug>(coc-rename)
+
+        " Use K to show documentation in preview window.
+        nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+        " Formatting.
+        command! -nargs=0 Format :call CocAction('format')
+    endfunction
 
     " (Optional) Multi-entry selection UI.
     Plug 'junegunn/fzf'
