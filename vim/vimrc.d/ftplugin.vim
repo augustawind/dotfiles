@@ -9,15 +9,11 @@ let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/9.0.1
 " elixir
 
 Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 
 " ------------------------------------------------
 " elm
 
 Plug 'elmcast/elm-vim'
-if has('nvim')
-    Plug 'pbogut/deoplete-elm'
-endif
 
 " ------------------------------------------------
 " git
