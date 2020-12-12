@@ -11,7 +11,10 @@ if has('nvim')
 
     " CoC language server support (disabled by default in favor of deoplete).
     set hidden
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim',
+                \ { 'branch': 'release',
+                \   'do': ':CocInstall coc-json coc-lua coc-elixir'
+                \ }
     let g:coc_enabled = 0
 
     " (Optional) Multi-entry selection UI.
