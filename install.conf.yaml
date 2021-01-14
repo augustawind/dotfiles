@@ -23,6 +23,7 @@
 
     # Vim
     ~/.vimrc: vim/vimrc
+    ~/.config/nvim/coc-settings.json: vim/coc-settings.json
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.vim/init.vim: vim/init.vim
     ~/.vim/ftplugin: vim/ftplugin/
