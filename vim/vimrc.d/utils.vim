@@ -1,7 +1,5 @@
-" session management (gui only)
+" [!] needed by other plugins
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-let g:session_autosave = 'yes'
 
 " session management
 Plug 'tpope/vim-obsession'
@@ -68,3 +66,6 @@ let g:indentLine_setColors = 0
 
 " async `make`
 Plug 'neomake/neomake'
+
+" splash page
+Plug 'mhinz/vim-startify'
