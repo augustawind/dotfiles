@@ -1,6 +1,5 @@
 " use CoC instead of deoplete
-call deoplete#disable()
-let g:coc_enabled = 1
+call EnableCoc()
 
 let g:haskell_enable_quantification = 1   " highlight `forall`
 let g:haskell_enable_recursivedo = 1      " highlight `mdo` and `rec`
