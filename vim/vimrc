@@ -126,9 +126,10 @@ if has('gui_running')
     set guifont=Monaco:h13
     set linespace=5
 else
+    set background=dark
     set termguicolors
     " let ayucolor="light"
-    let ayucolor="mirage"
-    " let ayucolor="dark"
+    " let ayucolor="mirage"
+    let ayucolor="dark"
     colorscheme ayu
 endif
