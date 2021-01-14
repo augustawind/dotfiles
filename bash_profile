@@ -26,6 +26,7 @@ export GOPATH=$HOME/work
 export PATH="$GOPATH/bin:$HOME/bin:$PATH"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export LESS='-R'
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # imports --------------------------------------------------------------------
 
