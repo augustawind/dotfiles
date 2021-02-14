@@ -5,12 +5,15 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-obsession'
 
 " file explorer
-Plug 'justinmk/vim-dirvish'
-
-" fuzzy find-anywhere
-Plug 'kien/ctrlp.vim'
-let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_custom_ignore = '\v[\/]dist$'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+autocmd! VimEnter * call defx#custom#option('_', {
+            \ 'winwidth': 30,
+            \ 'split': 'vertical',
+            \ 'show_ignored_files': 0,
+            \ 'buffer_name': 'defxplorer',
+            \ 'toggle': 1,
+            \ 'resume': 1
+            \ })
 
 " unify tabs and buffers
 Plug 'ap/vim-buftabline'
@@ -29,14 +32,25 @@ let g:colorscheme_switcher_define_mappings = 0
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
-" ripgrep
-Plug 'jremmen/vim-ripgrep'
-
 " repeat last command (enhanced for tpope)
 Plug 'tpope/vim-repeat'
 
 " surround things with other things
 Plug 'tpope/vim-surround'
+
+" s-expressions
+Plug 'guns/vim-sexp'
+let g:sexp_filetypes = 'clojure,scheme,lisp,timl,fennel'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+" fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+command! -bang -nargs=* GGrep
+            \ call fzf#vim#grep(
+            \   'git grep --line-number -- '.shellescape(<q-args>), 0,
+            \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 " expand %% to current buffer dir
 cabbr <expr> %% expand('%:p:h')

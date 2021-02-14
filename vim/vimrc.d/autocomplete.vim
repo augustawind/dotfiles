@@ -5,6 +5,16 @@ set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 
 if has('nvim')
     " ------------------------------------------------------------------
+    " general
+    Plug 'ncm2/float-preview.nvim'
+    let g:float_preview#docked = 0
+    let g:float_preview#max_width = 80
+    let g:float_preview#max_height = 40
+
+    " (Optional) Multi-entry selection UI.
+    Plug 'junegunn/fzf'
+
+    " ------------------------------------------------------------------
     " deoplete - enabled by default
 
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,8 +39,8 @@ if has('nvim')
         " time diagnostics appear/become resolved.
         set signcolumn=yes
 
-        " Use `[g` and `]g` to navigate diagnostics
-        " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+        " Use `[g` and `]g` to navigate diagnostics.
+        " Use `:CocDiagnostics` for diagnostics of current buf in location list.
         nmap <silent> [g <Plug>(coc-diagnostic-prev)
         nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
@@ -46,9 +56,6 @@ if has('nvim')
         " Formatting.
         command! -nargs=0 Format :call CocAction('format')
     endfunction
-
-    " (Optional) Multi-entry selection UI.
-    Plug 'junegunn/fzf'
 else
     Plug 'Shougo/vimproc.vim'
     Plug 'Shougo/neocomplete.vim'

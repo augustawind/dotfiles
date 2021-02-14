@@ -28,6 +28,9 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export LESS='-R'
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Suppress JDK deprecation warning for opts "-Xverify:none" & "-noverify"
+export LEIN_JVM_OPTS="-XX:TieredStopAtLevel=1"
+
 # imports --------------------------------------------------------------------
 
 source ~/.bash/venv-completion.bash

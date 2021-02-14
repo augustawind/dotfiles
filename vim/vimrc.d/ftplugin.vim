@@ -1,9 +1,15 @@
-" c/c++
 " ------------------------------------------------
+" c/c++
+
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-clang'
 let g:deoplete#sources#clang#libclang_path = "/Library/Developer/CommandLineTools/usr/lib/libclang.dylib"
 let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/9.0.1/include/"
+
+" ------------------------------------------------
+" clojure
+
+Plug 'Olical/conjure', {'tag': 'v4.14.1'}
 
 " ------------------------------------------------
 " elixir
@@ -14,6 +20,12 @@ Plug 'elixir-editors/vim-elixir'
 " elm
 
 Plug 'elmcast/elm-vim'
+
+" ------------------------------------------------
+" fennel
+
+Plug 'Olical/aniseed', { 'tag': 'v3.15.0' }
+Plug 'bakpakin/fennel.vim'
 
 " ------------------------------------------------
 " git
@@ -65,13 +77,9 @@ Plug 'davidhalter/jedi-vim'
 Plug 'zchee/deoplete-jedi'
 
 " ------------------------------------------------
-" python
-
-Plug 'alexgenco/neovim-ruby'
-
-" ------------------------------------------------
 " ruby
 
+Plug 'alexgenco/neovim-ruby'
 Plug 'fishbullet/deoplete-ruby'
 
 " ------------------------------------------------
