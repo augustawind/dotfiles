@@ -193,13 +193,6 @@ export NVM_DIR="/Users/dtr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source "${NVM_DIR}/bash_completion"
 
-# virtualenv -----------------------------------------------------------------
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-
 # docker ---------------------------------------------------------------------
 
 function board () {
