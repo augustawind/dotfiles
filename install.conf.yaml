@@ -18,6 +18,7 @@
     ~/.lessfilter: lessfilter
     ~/.mix/config.exs: mix/config.exs
     ~/.spacemacs: spacemacs
+    ~/.stack/global-project/stack.yaml: stack/global-project/stack.yaml
     ~/.tern-config: tern-config
     ~/.tmux.conf: tmux.conf
 
