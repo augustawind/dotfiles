@@ -42,8 +42,9 @@ Plug 'fatih/vim-go'
 " haskell
 
 Plug 'neovimhaskell/haskell-vim'
-Plug 'nbouscal/vim-stylish-haskell'
+Plug 'alx741/vim-hindent'
 Plug 'alx741/vim-stylishask'
+Plug 'sdiehl/vim-ormolu'
 Plug 'godlygeek/tabular'
 
 " ------------------------------------------------
