@@ -13,6 +13,7 @@
     ~/.config/elixir_ls: elixir_ls/
     ~/.gitconfig: gitconfig
     ~/.guile: guile
+    ~/.ideavimrc: ideavimrc
     ~/.iex.exs: iex.exs
     ~/.iterm2: iterm2/
     ~/.lessfilter: lessfilter

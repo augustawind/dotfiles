@@ -83,3 +83,34 @@ Plug 'neomake/neomake'
 
 " splash page
 Plug 'mhinz/vim-startify'
+
+" 'aa', 'ia' motions (select inner argument)
+" https://github.com/vim-scripts/argtextobj.vim
+Plug 'vim-scripts/argtextobj.vim'
+let g:argtextobj_pairs = "[:],{:},(:),<:>"
+
+" 'ae', 'ie' motions (select entire document)
+" https://github.com/kana/vim-textobj-entire
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+
+" replace contents of register (clipboard)
+" https://github.com/vim-scripts/ReplaceWithRegister
+"
+" [count]["x]gr{motion}   Replace {motion} text with the contents of register x.
+"                         Especially when using the unnamed register, this is
+"                         quicker than "_d{motion}P or "_c{motion}<C-R>"
+" [count]["x]grr          Replace [count] lines with the contents of register x.
+"                         To replace from the cursor position to the end of the
+"                         line use ["x]gr$
+" {Visual}["x]gr          Replace the selection with the contents of register x.
+Plug 'vim-scripts/ReplaceWithRegister'
+
+" semi-interactive text exchange operator
+" https://github.com/tommcdo/vim-exchange
+"
+" `cx{motion}`  1st use, select text to exchange; 2nd use, perform exchange
+" `cxx`         like `cx` but use current line
+" `X`           like `cx` but for visual mode
+" `cxc`         clear current motion
+Plug 'tommcdo/vim-exchange'
