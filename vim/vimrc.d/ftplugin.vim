@@ -12,6 +12,11 @@ let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/9.0.1
 Plug 'Olical/conjure', {'tag': 'v4.14.1'}
 
 " ------------------------------------------------
+" dhall
+
+Plug 'vmchale/dhall-vim'
+
+" ------------------------------------------------
 " elixir
 
 Plug 'elixir-editors/vim-elixir'
