@@ -24,7 +24,8 @@ Plug 'elixir-editors/vim-elixir'
 " ------------------------------------------------
 " elm
 
-Plug 'elmcast/elm-vim'
+" We're using coc.nvim instead!
+" Plug 'elmcast/elm-vim'
 
 " ------------------------------------------------
 " fennel

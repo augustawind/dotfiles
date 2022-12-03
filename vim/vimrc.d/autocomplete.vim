@@ -39,6 +39,9 @@ if has('nvim')
         " time diagnostics appear/become resolved.
         set signcolumn=yes
 
+        " Use <c-space> to trigger completion.
+        inoremap <silent><expr> <c-space> coc#refresh()
+
         " Use `[g` and `]g` to navigate diagnostics.
         " Use `:CocDiagnostics` for diagnostics of current buf in location list.
         nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -55,6 +58,20 @@ if has('nvim')
 
         " Formatting.
         command! -nargs=0 Format :call CocAction('format')
+
+        " Use K to show documentation in preview window.
+        nnoremap <silent> K :call ShowDocumentation()<CR>
+
+        function! ShowDocumentation()
+          if CocAction('hasProvider', 'hover')
+            call CocActionAsync('doHover')
+          else
+            call feedkeys('K', 'in')
+          endif
+        endfunction
+
+        " Highlight the symbol and its references when holding the cursor.
+        autocmd CursorHold * silent call CocActionAsync('highlight')
     endfunction
 else
     Plug 'Shougo/vimproc.vim'

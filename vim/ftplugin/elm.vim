@@ -8,7 +8,7 @@ let g:elm_syntastic_show_warnings = 1
 
 if has('nvim')
     call deoplete#disable()
-    let b:coc_enabled = 1
+    call EnableCoc()
 else
     let g:neocomplete#sources#omni#input_patterns.elm =
         \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
