@@ -16,11 +16,14 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/Applications/Alacritty.app/Contents/MacOS:$PATH"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
 # environment variables ------------------------------------------------------
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/share/man:$MANPATH"
 export LANG="en_US.UTF-8"
-export EDITOR="/usr/local/bin/nvim"
+export EDITOR="/opt/homebrew/bin/nvim"
 export SUDO_EDITOR="$EDITOR"
 export GOPATH=$HOME/work
 export PATH="$GOPATH/bin:$HOME/bin:$PATH"
@@ -33,17 +36,13 @@ export LEIN_JVM_OPTS="-XX:TieredStopAtLevel=1"
 
 # imports --------------------------------------------------------------------
 
-source ~/.bash/venv-completion.bash
-source ~/.bash/git-completion.bash
-source ~/.bash/kerl-completion.bash
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
-source "/usr/local/opt/asdf/asdf.sh"
-source "/usr/local/opt/asdf/etc/bash_completion.d/asdf.bash"
 [[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex"
 
-eval "$(stack --bash-completion-script stack)"
-eval "$(pyenv init -)"
+#eval "$(stack --bash-completion-script stack)"
+#eval "$(pyenv init -)"
 
 # prompt ---------------------------------------------------------------------
 
@@ -192,15 +191,13 @@ shopt -s checkwinsize
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-source "${NVM_DIR}/bash_completion"
+[ -s "$NVM_DIR/nvm.sh" ] && . "${NVM_DIR}/bash_completion"
 
 # docker ---------------------------------------------------------------------
 
 function board () {
     docker exec -it "$1" bash
 }
-
-export PATH="$HOME/.cargo/bin:$PATH"
 
 export VULKAN_SDK="$HOME/.vulkan_sdk/macOS"
 

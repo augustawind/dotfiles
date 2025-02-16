@@ -4,7 +4,7 @@
 [hub]
 	protocol = https
 [core]
-	editor = /usr/local/bin/nvim
+	editor = /opt/homebrew/bin/nvim
 [credential]
 	helper = osxkeychain
 [alias]
